@@ -688,7 +688,7 @@ function App() {
     // Level reactivity - tracks both currentLevel and retryCounter
     createEffect(() => {
       const level = currentLevel()
-      const _retry = retryCounter() // Track retry counter to trigger on retry
+      retryCounter() // Track retry counter to trigger on retry
       if (!showMenu() && !showLevelSelect()) {
         initLevel(level)
       }
