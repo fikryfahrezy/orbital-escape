@@ -21,7 +21,7 @@ COPY . .
 RUN npm run build
 
 # 3. Production image, copy all the files and run next
-FROM nginx:1.29.5-bookworm AS runner
+FROM nginx:1.29.7-trixie AS runner
 WORKDIR /app
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 \
