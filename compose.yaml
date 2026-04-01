@@ -4,9 +4,6 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: orbital-space
-    env_file:
-      - path: ./.env
-        required: true
     restart: unless-stopped
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:80"]
