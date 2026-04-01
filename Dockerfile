@@ -1,4 +1,4 @@
-FROM node:22.9.0-bookworm AS base
+FROM node:24.13.1-bookworm AS base
 
 # 1. Install dependencies only when needed
 FROM base AS deps
@@ -21,7 +21,7 @@ COPY . .
 RUN npm run build
 
 # 3. Production image, copy all the files and run next
-FROM nginx:1.27.4-bookworm AS runner
+FROM nginx:1.29.5-bookworm AS runner
 WORKDIR /app
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 \

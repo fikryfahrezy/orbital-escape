@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: highway-fe
+    container_name: orbital-space
     env_file:
       - path: ./.env
         required: true
